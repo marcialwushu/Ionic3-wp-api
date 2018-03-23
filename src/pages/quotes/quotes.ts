@@ -1,3 +1,4 @@
+import { QuotesProvider } from './../../providers/quotes/quotes';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
@@ -15,7 +16,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class QuotesPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  quotes;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, private quotesProvider: QuotesProvider) {
+    this.quotesProvider.getQuotes().subscribe( data => {
+      console.log(data);
+    });
   }
 
   ionViewDidLoad() {
