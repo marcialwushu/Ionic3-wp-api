@@ -7,12 +7,18 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>quotes</ion-title>
+    <ion-title>Quotes</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+
+  <ion-list>
+    <button ion-item *ngFor="let quote of quotes" (click)="onShowQuotesDetail(quotes);">
+      {{ quote.title.rendered }}
+    </button>
+  </ion-list>
 
 </ion-content>
