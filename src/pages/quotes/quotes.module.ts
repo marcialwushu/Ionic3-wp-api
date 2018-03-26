@@ -1,6 +1,8 @@
+import { QuotesPage } from './quotes';
+;
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
-import { QuotesPage } from './quotes';
+
 
 @NgModule({
   declarations: [
@@ -10,4 +12,4 @@ import { QuotesPage } from './quotes';
     IonicPageModule.forChild(QuotesPage),
   ],
 })
-export class QuotesPageModule {}
+export class TabsPageModule {}

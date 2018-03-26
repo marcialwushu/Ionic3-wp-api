@@ -17,7 +17,16 @@ export class QuotesProvider {
   }
 
   getQuotes(){
+    console.log(this.api_url);
     return this.http.get(this.api_url);
+    
   }
+
+  getQuotesById(value: string){
+    
+    return this.http.get(this.api_url + '/'+ value);
+    
+  }
+  
 
 }

@@ -1,5 +1,7 @@
-import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { QuotesPage } from './../pages/quotes/quotes';
+
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+
 import { LoginPage } from './../pages/login/login';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -21,7 +23,8 @@ import { QuotesProvider } from '../providers/quotes/quotes';
     LoginPage,
     TabsPage,
     QuotesPage,
-    ContactPage
+    ContactPage,
+    
     
   ],
   imports: [
@@ -35,7 +38,8 @@ import { QuotesProvider } from '../providers/quotes/quotes';
     LoginPage,
     TabsPage,
     QuotesPage,
-    ContactPage
+    ContactPage,
+    
     
   ],
   providers: [

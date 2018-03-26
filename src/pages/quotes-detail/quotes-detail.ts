@@ -1,5 +1,8 @@
+import { HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { QuotesProvider } from '../../providers/quotes/quotes';
+
 
 /**
  * Generated class for the QuotesDetailPage page.
@@ -14,8 +17,14 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'quotes-detail.html',
 })
 export class QuotesDetailPage {
+  public quote : any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private quotesProvider: QuotesProvider) {
+    this.quotesProvider.getQuotesById('11').subscribe( data => {
+      console.log(data);
+      this.quote = data;
+    })
+    
   }
 
   ionViewDidLoad() {

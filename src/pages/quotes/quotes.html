@@ -17,7 +17,7 @@
 
   <ion-list>
     <button ion-item *ngFor="let quote of quotes" (click)="onShowQuotesDetail(quotes);">
-      {{ quote.title.rendered }}
+      {{ quote?.title.rendered }}
     </button>
   </ion-list>
 
