@@ -18,11 +18,22 @@ import { QuotesProvider } from '../../providers/quotes/quotes';
 })
 export class QuotesDetailPage {
   public quote : any;
+  content: any;
+  public quoteid;
+  
+  
+
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private quotesProvider: QuotesProvider) {
-    this.quotesProvider.getQuotesById('11').subscribe( data => {
+    this.quoteid = this.navParams.get('id');
+    console.log(this.quoteid);
+    this.quotesProvider.getQuotesById(this.quoteid).subscribe( data => {
+      let retorno = (data as any);
       console.log(data);
-      this.quote = data;
+      this.quote = retorno;
+      this.content = this.quote;
+      console.log(this.content);
+
     })
     
   }

@@ -14,13 +14,16 @@
 
 
 <ion-content padding>
-    <ion-card>
+    <ion-card *ngIf="quote">
         <ion-card-header>
-          Header {{quote?.title?.rendered}}
+          Header {{quote?.title?.rendered | json}}
         </ion-card-header>
         <ion-card-content>
-          The British use the term "header", but the American term "head-shot" the English simply refuse to adopt.
+            <div [innerHTML]="quote?.content?.rendered">
+              </div>
+          
         </ion-card-content>
+
       </ion-card>
 
 </ion-content>

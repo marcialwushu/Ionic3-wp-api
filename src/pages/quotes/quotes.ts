@@ -32,7 +32,7 @@ export class QuotesPage {
   }
 
   onShowQuotesDetail(quotes){
-    this.navCtrl.push('QuotesDetailPage', {quote: quotes})
+    this.navCtrl.push('QuotesDetailPage', {id: quotes})
   }
 
 }

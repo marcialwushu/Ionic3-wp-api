@@ -22,9 +22,9 @@ export class QuotesProvider {
     
   }
 
-  getQuotesById(value: string){
+  getQuotesById(quoteid){
     
-    return this.http.get(this.api_url + '/'+ value);
+    return this.http.get(this.api_url + '/'+ quoteid);
     
   }
   
