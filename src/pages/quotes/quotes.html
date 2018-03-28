@@ -18,18 +18,10 @@
   <ion-list>
     <button ion-item *ngFor="let quote of quotes" (click)="onShowQuotesDetail(quote.id);">
       {{ quote?.title.rendered }}
-      {{ quotes?.content | json}}
-      {{ quotes?.content?.rendered | json }}
+      
     </button>
   </ion-list>
 
-  <ion-card>
-    <ion-card-header *ngIf="quotes">
-      Header {{ quotes.writer | json}}
-    </ion-card-header>
-    <ion-card-content>
-      {{ quotes?.content?.protected }}
-    </ion-card-content>
-  </ion-card>
+  
 
 </ion-content>
