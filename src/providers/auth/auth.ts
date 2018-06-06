@@ -26,7 +26,7 @@ export class AuthProvider {
 
     let headers = new HttpHeaders();
     headers.set('Content-Type', 'application/json');
-    return this.http.post(this.api_url, data, options:{headers: headers});
+    return this.http.post(this.api_url, data, {headers: headers});
   }
 
 }
