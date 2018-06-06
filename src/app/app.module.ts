@@ -1,8 +1,7 @@
-import { QuotesPage } from './../pages/quotes/quotes';
 
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
-import { LoginPage } from './../pages/login/login';
+
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
@@ -12,20 +11,15 @@ import { MyApp } from './app.component';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { TabsPage } from '../pages/tabs/tabs';
-import { ContactPage } from '../pages/contact/contact';
+
 import { AuthProvider } from '../providers/auth/auth';
 import { QuotesProvider } from '../providers/quotes/quotes';
 
 @NgModule({
   declarations: [
-    MyApp,
-    LoginPage,
-    TabsPage,
-    QuotesPage,
-    ContactPage,
-    
-    
+    MyApp
+
+
   ],
   imports: [
     BrowserModule,
@@ -34,13 +28,9 @@ import { QuotesProvider } from '../providers/quotes/quotes';
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp,
-    LoginPage,
-    TabsPage,
-    QuotesPage,
-    ContactPage,
-    
-    
+    MyApp
+
+
   ],
   providers: [
     StatusBar,

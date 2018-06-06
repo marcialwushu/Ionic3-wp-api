@@ -2,12 +2,6 @@ import { AuthProvider } from './../../providers/auth/auth';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the LoginPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -20,6 +14,9 @@ export class LoginPage {
   password;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private authProvider: AuthProvider) {
+    if(localStorage.getItem('wpIonicToken')){
+      this.navCtrl.push('QuotesPage');
+    }
   }
 
   ionViewDidLoad() {
