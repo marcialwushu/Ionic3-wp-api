@@ -15,7 +15,7 @@ export class LoginPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private authProvider: AuthProvider) {
     if(localStorage.getItem('wpIonicToken')){
-      this.navCtrl.setRoot('QuotesPage');
+      this.navCtrl.setRoot('TabsPage');
     }
   }
 
