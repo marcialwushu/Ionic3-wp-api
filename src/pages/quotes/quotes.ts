@@ -35,4 +35,8 @@ export class QuotesPage {
     this.navCtrl.push('QuotesDetailPage', {id: quotes})
   }
 
+  onGoToCreateQuote(){
+    this.navCtrl.push('CreateQuotePage');
+  }
+
 }
