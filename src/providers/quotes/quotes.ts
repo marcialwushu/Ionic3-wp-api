@@ -31,19 +31,21 @@ export class QuotesProvider {
   postQuote(content, author){
     let data = {
       title: content,
-      content: content,
-      author: author,
+      quote: content,
+      writer: author,
       status: 'publish'
 
     };
 
+    console.log(data);
+
     let token = JSON.parse(localStorage.getItem('wpIonicToken')).token;
     console.log(token);
 
-
-    let headers = new HttpHeaders();
-    headers.set('Content-Type', 'application/json');
-    headers.set('Authorization', `Bearer ${token}`);
+    let headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${token}`
+    });
 
     return this.http.post(this.api_url, data, {headers: headers});
 
