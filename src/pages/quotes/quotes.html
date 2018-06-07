@@ -8,6 +8,11 @@
 
   <ion-navbar>
     <ion-title>Quotes</ion-title>
+    <ion-buttons end>
+      <button ion-button ion-only>
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 
 </ion-header>
@@ -18,10 +23,10 @@
   <ion-list>
     <button ion-item *ngFor="let quote of quotes" (click)="onShowQuotesDetail(quote.id);">
       {{ quote?.title.rendered }}
-      
+
     </button>
   </ion-list>
 
-  
+
 
 </ion-content>
